@@ -1,0 +1,31 @@
+import random
+import time
+
+rSayı = random.randint(1,3)
+tHakkı = 3
+
+while True:
+    sayı = input("Sayı:")
+    
+    if sayı == "q":
+        print("Program sonlandırıldı..")
+        break
+    sayı = int(sayı)
+    
+    if sayı == rSayı:
+        print("Bilgiler kontrol ediliyor. Bekleyiniz..")
+        time.sleep(5)
+        print("Tahmininiz doğru. Tebrikler..")
+        break
+    else:
+        tHakkı -= 1
+        if tHakkı == 0:
+            print("Bilgiler kontrol ediliyor. Bekleyiniz..")
+            time.sleep(5)
+            print("Tahmininiz yanlış. Hakkınız bitti. Program sonlandırıldı. Doğru sayı:", rSayı)
+            break
+        else:
+            print("Bilgiler kontrol ediliyor. Bekleyiniz..")
+            time.sleep(5)
+            print("Tahmininiz yanlış. Tekrar deneyiniz. Kalan hakkınız:", tHakkı)
+        
