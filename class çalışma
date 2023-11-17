@@ -1,0 +1,29 @@
+class Yazılımcı:
+    
+    def __init__(self, adı, yaş, numara, maaş, dil):
+        self.adı = adı
+        self.yaş = yaş
+        self.numara = numara
+        self.maaş = maaş
+        self.dil = dil
+        
+    def bilgileri_göster(self):
+        print("Adı: {}\nYaş: {}\nNumara: {}\nMaaş: {}\nDiller: {}".format(self.adı, self.yaş, self.numara, self.maaş, self.dil))
+    
+    def zam_yap(self):
+        while True:
+            miktar = int(input("Miktar: "))
+            if miktar <= 0 :
+                print("Lütfen 0'dan büyük bir sayı giriniz..")
+                
+            else:
+                self.maaş += miktar
+                break
+        return self.maaş
+        
+
+yazılımcı1 = Yazılımcı("Sercan", 28, 21559756, 45000, ["Python, Php"])
+yazılımcı1.bilgileri_göster()
+
+yazılımcı1.zam_yap()
+yazılımcı1.bilgileri_göster()
